@@ -1,4 +1,7 @@
-""" Queue program """
+""" Queue.py: Program for Queue operations """
+
+__author__ = "Pratik Shah"
+__maintainer__ = __author__
 
 from Exceptions import QueueEmptyException, QueueFullException
 
