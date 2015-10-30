@@ -26,3 +26,7 @@ class QueueEmptyException(BaseClassException):
 class QueueFullException(BaseClassException):
 	""" Class for queue full exception """
 	pass
+
+class EmptyRootException(BaseClassException):
+	""" Class for empty root in singly linked list program """
+	pass
