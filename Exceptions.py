@@ -30,3 +30,7 @@ class QueueFullException(BaseClassException):
 class EmptyRootException(BaseClassException):
 	""" Class for empty root in singly linked list program """
 	pass
+
+class ArrayLengthNotSameException(BaseClassException):
+	""" Class for array length is not same in ReorderArray program """
+	pass
