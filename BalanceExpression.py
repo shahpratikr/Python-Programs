@@ -21,12 +21,12 @@ Algorithm:
 __author__ = "Pratik Shah"
 __maintainer__ = __author__
 
-from Exceptions import OddLengthStringException
+from Exceptions import OddLengthException
 
 def count_reversals_required_to_balance_string(input_string):
 	""" Count number of reversals required to balance given expression """
 	if len(input_string) % 2:
-		raise OddLengthStringException("ERROR: String cannot be balanced because it has odd number" \
+		raise OddLengthException("ERROR: String cannot be balanced because it has odd number" \
 			" of characters.")
 	open_bracket_count = 0
 	number_of_reversals_required = 0
@@ -47,5 +47,5 @@ if __name__ == '__main__':
 	try:
 		string_expression = raw_input("Enter string expression: ")
 		count_reversals_required_to_balance_string(string_expression)
-	except OddLengthStringException as olse:
+	except OddLengthException as olse:
 		print olse

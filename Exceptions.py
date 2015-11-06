@@ -15,7 +15,7 @@ class StackFullException(BaseClassException):
 	""" Class for stack full exception """
 	pass
 
-class OddLengthStringException(BaseClassException):
+class OddLengthException(BaseClassException):
 	""" Raised this exception if string_expression length is odd """
 	pass
 
