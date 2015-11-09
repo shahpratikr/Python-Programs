@@ -25,16 +25,15 @@ __maintainer__ = __author__
 
 def check_representation(data_array):
 	""" Check if input_array can represent preorder traversal of BST """
-	root = 0
-	for i in range(len(data_array)):
-		if data_array[i] < root:
+	stack_array = []
+	root_value = 0
+	for index in range(len(data_array)):
+		if data_array[index] < root_value:
 			return False
-		while len(data_array) > 0 and data_array[len(data_array)-1] < data_array[i]:
-			root = data_array[len(data_array)-1]
-			data_array.pop()
-			print data_array
-		data_array.append(data_array[i])
-	print data_array
+		while len(stack_array) > 0 and stack_array[len(stack_array)-1] < data_array[index]:
+			root_value = data_array[len(stack_array)-1]
+			stack_array.pop()
+		stack_array.append(data_array[index])
 	return True
 
 if __name__ == '__main__':
