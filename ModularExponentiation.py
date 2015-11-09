@@ -17,11 +17,20 @@ http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
 __author__ = "Pratik Shah"
 __maintainer__ = __author__
 
+import math
+
+def compute_minimum_mod(first_value, second_value, mod_value):
+	""" Compute minimum mod value """
+	power_value = int(math.pow(first_value, second_value))
+	return power_value % mod_value
+
 if __name__ == '__main__':
 	try:
-		first_value = int(input("Enter first number: "))
-		second_value = int(input("Enter second number: "))
-		power_value = int(input("Enter power value: "))
+		input_first_value = int(input("Enter first number: "))
+		input_second_value = int(input("Enter second number: "))
+		input_mod_value = int(input("Enter mod value: "))
+		output_mod_value = compute_minimum_mod(input_first_value, input_second_value, input_mod_value)
+		print "Minimum mod value: %s" % output_mod_value
 	except ValueError:
 		print "Input should be in integers"
 	
