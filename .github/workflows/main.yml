@@ -6,8 +6,6 @@ on:
       - opened
     paths:
       - backend/**
-    branches-ignore:
-      - master
   push:
     branches:
       - master
